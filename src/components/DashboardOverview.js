@@ -78,7 +78,7 @@ const DashboardOverview = ({ dashboardData }) => {
                         <h4>{dashboardData.policy.forlocation}</h4>
                         <p>{dashboardData.policy.onshort}</p>
                         <div className="benefits-list">
-                            {dashboardData.policy.benifits.slice(0, 3).map((benefit, index) => (
+                            {dashboardData.policy.benifits && Array.isArray(dashboardData.policy.benifits) && dashboardData.policy.benifits.slice(0, 3).map((benefit, index) => (
                                 <div key={index} className="benefit-item">
                                     <i className="fas fa-check-circle" style={{ color: '#67C090' }}></i>
                                     <span>{benefit}</span>
