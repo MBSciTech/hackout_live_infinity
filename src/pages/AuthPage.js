@@ -62,7 +62,7 @@ const AuthPage = () => {
           localStorage.setItem('user', JSON.stringify(data.user));
           // Redirect to dashboard after a brief delay
           setTimeout(() => {
-            window.location.href = '/dashboard';
+            window.location.href = '/qna';
           }, 1500);
         } else {
           setErrorMessage(data.message || 'Login failed. Please try again.');
