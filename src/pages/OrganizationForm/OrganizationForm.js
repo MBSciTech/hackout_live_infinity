@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './OrganizationForm.css';
+import { useNavigate } from 'react-router';
 
 const OrganizationForm = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -9,6 +10,7 @@ const OrganizationForm = () => {
   const [assistantMessage, setAssistantMessage] = useState("");
   const [message, setMessage] = useState(''); // State for the custom message box
   const [isError, setIsError] = useState(false); // State to indicate if the message is an error
+  const navigate = useNavigate();
 
   // Filtered questions - only keeping the important ones
   const questionCategories = [
@@ -187,7 +189,7 @@ const OrganizationForm = () => {
       localStorage.setItem('apiResponseData', JSON.stringify(responseData));
 
       // 4. Show success message
-      setMessage("Thank you for completing the questionnaire! Your data has been saved and is being processed.");
+      navigate('/dashboard');
       setIsError(false);
 
     } catch (error) {
