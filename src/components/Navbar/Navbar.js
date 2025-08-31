@@ -12,9 +12,8 @@ const Navbar = () => {
     { id: 'dashboard', icon: 'fas fa-tachometer-alt', path: '/dashboard' },
     { id: 'map', icon: 'fas fa-map-marked-alt', path: '/map' },
     { id: 'News', icon: 'fas fa-newspaper', path: '/news' },
-    { id: 'Machinary', icon: 'fas fa-screwdriver', path: '/Machinary' },
-    { id: 'settings', icon: 'fas fa-cog', path: '/settings' },
-    { id: 'profile', icon: 'fas fa-user-circle', path: '/profile' },
+    { id: 'Machinary', icon: 'fas fa-screwdriver', path: '/Machinary' }
+   
   ];
 
   useEffect(() => {
