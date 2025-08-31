@@ -9,6 +9,7 @@ import DashboardAnalytics from '../components//DashboardAnalytics'; // Import th
 import DashboardResources from '../components//DashboardResources'; // Import the new component
 import DashboardReports from '../components//DashboardReports'; // Import the new component
 
+
 const Dashboard = () => {
     const [activeTab, setActiveTab] = useState('overview');
     const [dashboardData, setDashboardData] = useState(null);
@@ -42,6 +43,8 @@ const Dashboard = () => {
         //     Chart.ArcElement
         // );
         // Fetch data from localStorage
+        var res = localStorage.getItem('apiResponseData');
+        if(!res) navigate('/qna');
         const fetchDataFromStorage = () => {
             try {
                 const storedData = localStorage.getItem('apiResponseData');
