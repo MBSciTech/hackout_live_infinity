@@ -38,7 +38,7 @@ function Layout() {
         </Routes>
 
       </main>
-      {!shouldHideLayout && <Footer />}
+     
     </>
   );
 }
